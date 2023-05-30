@@ -4,8 +4,8 @@
 
 
 {% block style %}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@2.9.2/dist/xterm.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@2.9.2/dist/addons/fullscreen/fullscreen.min.css">
+<link rel="stylesheet" href="/static/css/xterm.min.css">
+<link rel="stylesheet" href="/static/css/fullscreen.min.css">
 <style>
   html,
   body,
@@ -434,11 +434,11 @@
 {% end %}
 
 {% block script %}
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/xterm@2.9.2/dist/xterm.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/xterm@2.9.2/dist/addons/fit/fit.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/css-element-queries@1.1.1/src/ResizeSensor.min.js"></script>
+<script src="{{static_url('javascripts/popper.min.js')}}"></script>
+<script src="{{static_url('javascripts/clipboard.min.js')}}"></script>
+<script src="{{static_url('javascripts/xterm.min.js')}}"></script>
+<script src="{{static_url('javascripts/fit.min.js')}}"></script>
+<script src="{{static_url('javascripts/ResizeSensor.min.js')}}"></script>
 <script src="{{static_url('javascripts/imagepool.js')}}"></script>
 <script>
 

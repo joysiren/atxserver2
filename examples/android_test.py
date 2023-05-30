@@ -10,9 +10,10 @@ import requests
 from logzero import logger
 
 import uiautomator2 as u2
+import os
 
 server_url = "http://localhost:4000"
-token = "82d03bc6110145b2814e5e3c55bd8980"  # change to your token
+token = os.getenv("TOKEN")  # change to your token
 
 
 def make_url(path):
@@ -68,7 +69,7 @@ def main():
             params={"udid": udid},
             data={
                 "url":
-                "https://github.com/openatx/atxserver2/releases/download/v0.2.0/ApiDemos-debug.apk"
+                "http://web:4000/static/ApiDemos-debug.apk"
             })
         pprint(ret)
 

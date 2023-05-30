@@ -11,7 +11,16 @@ services:
     depends_on:
     - rethinkdb
     # restart: on-failure
+    networks:
+      - atx-network
   rethinkdb:
     image: rethinkdb:2.3.6
-    volumes:
-      - ./rethinkdb_data:/data
+    networks:
+      - atx-network
+#    volumes:
+#      - ./rethinkdb_data:/data
+networks:
+  atx-network:
+    driver: bridge
+    driver_opts:      
+      "com.docker.network.bridge.enable_ip_masquerade": "true"
